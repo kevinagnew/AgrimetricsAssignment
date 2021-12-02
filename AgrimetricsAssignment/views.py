@@ -1,16 +1,13 @@
 from django.shortcuts import render
 from AgrimetricsAssignment.create_sandwich_order import CreateSandwich
 
-# Accept sandwich orders
-# List of tasks for giovanni
-
 
 # Request for home_view
 def home_view(request):
     return render(request, 'homepage.html')
 
 
-# Navigate to sandwich order
+# Request for creating an order
 def sandwich_order_view(request):
     return render(request, 'create_order.html')
 
@@ -32,6 +29,7 @@ def create_sandwich_order_view(request):
     return render(request, 'homepage.html')
 
 
+# Request for deleting/clearing all current orders
 def sandwich_order_delete_view(request):
     CreateSandwich.delete_all_orders(request)
     return render(request, 'task_to_complete.html')
