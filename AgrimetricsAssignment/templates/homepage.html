@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Giovanni's Task Tracker</title>
 </head>
 <body>
-Homepage
+<h1>Giovanni's Task Tracker</h1>
+<p>Create an order:</p>
+<button type="submit" onclick="location.href='{% url 'order_sandwich' %}'" name='mybtn2'>Create Order</button>
+<hr>
+<p>View tasks:</p>
+<button type="submit" onclick="location.href='{% url 'task_to_complete' %}'" name='mybtn2'>Tasks</button>
 </body>
 </html>
