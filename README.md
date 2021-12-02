@@ -7,3 +7,5 @@ Instructions to run:
 -Clone the git repo
 
 -Within terminal navigate to the manage.py folder and run the command 'python manage.py runserver'
+
+https://www.loom.com/share/57b9468d60074d1cb3e2553884d738c7
