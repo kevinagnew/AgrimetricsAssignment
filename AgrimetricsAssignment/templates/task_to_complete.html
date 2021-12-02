@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+{% if schedule %}
+    <h1>Tasks to complete:</h1>
+    <table>
+        <tr>
+            <th>Ticket</th>
+            <th>Table Number</th>
+            <th>Base</th>
+            <th>Meat One</th>
+            <th>Meat Two</th>
+            <th>Cheese</th>
+            <th>Sauce</th>
+            <th>Salad</th>
+            <th>Extra</th>
+        </tr>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.name }}</td>
+                <td>{{ order.base }}</td>
+                <td>{{ order.meat_one }}</td>
+                <td>{{ order.meat_two }}</td>
+                <td>{{ order.cheese }}</td>
+                <td>{{ order.sauce }}</td>
+                <td>{{ order.salad }}</td>
+                <td>{{ order.extra }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <ul>
+        {% for record in schedule %}
+            <li><strong>{{ record.start_time }}</strong> - Ticket {{ record.ticket }} : <b>Make</b> sandwich for {{ record.name }}</li>
+            <li><strong>{{ record.serve_time }}</strong> - Ticket {{ record.ticket }} : <b>Serve</b> sandwich for {{ record.name }}</li>
+        {% endfor %}
+        <li><strong>{{ break_time }}</strong> - Take a break</li>
+    </ul>
+    <button type="submit" onclick="location.href='{% url 'delete_sandwich' %}'" name='mybtn2'>Clear Tickets</button>
+    <button type="submit" onclick="location.href='{% url 'homepage' %}'" name='mybtn2'>Return</button>
+{% else %}
+    <h1>Tasks to complete:</h1>
+    <h2>Currently no tickets</h2>
+    <button type="submit" onclick="location.href='{% url 'homepage' %}'" name='mybtn2'>Return</button>
+{% endif %}
+</body>
+</html>

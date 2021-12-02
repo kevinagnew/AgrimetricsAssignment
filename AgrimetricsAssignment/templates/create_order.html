@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Order</title>
+</head>
+<body>
+<h1>Create a sandwich order</h1>
+<h1 class="text-center my-5">Contact Form</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <form action="create_sandwich" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="base">Base</label>
+                    <input type="text" class="form-control" name="base" id="base" placeholder="Base">
+                </div>
+                <div class="form-group">
+                    <label for="meat_one">First meat</label>
+                    <input type="text" class="form-control" name="meat_one" id="meat_one" placeholder="First meat">
+                </div>
+                <div class="form-group">
+                    <label for="meat_two">Second meat</label>
+                    <input type="text" class="form-control" name="meat_two" id="meat_two" placeholder="Second meat">
+                </div>
+                <div class="form-group">
+                    <label for="cheese">Cheese</label>
+                    <input type="text" class="form-control" name="cheese" id="cheese" placeholder="Cheese">
+                </div>
+                <div class="form-group">
+                    <label for="sauce">Sauce</label>
+                    <input type="text" class="form-control" name="sauce" id="sauce" placeholder="Sauce">
+                </div>
+                <div class="form-group">
+                    <label for="salad">Salad</label>
+                    <input type="checkbox" class="form-control" name="salad" id="salad" placeholder="Salad">
+                </div>
+                <div class="form-group">
+                    <label for="extra">Extra</label>
+                    <input type="text" class="form-control" name="extra" id="extra" placeholder="Extra">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+<hr>
+<button type="submit" onclick="location.href='{% url 'homepage' %}'" name='mybtn2'>Return</button>
+</body>
+</html>
