@@ -1,5 +1,11 @@
 # AgrimetricsAssignment
 
+Important files:
+
+-AgrimetricsAssignment/create_sandwich_orders.py
+
+-AgrimetricsAssignment/views.py
+
 Instructions to run:
 
 -Install django / python
