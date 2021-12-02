@@ -1,10 +1,9 @@
 # AgrimetricsAssignment
 
 Important files:
-
 -AgrimetricsAssignment/create_sandwich_orders.py
-
 -AgrimetricsAssignment/views.py
+-HTML found within AgrimetricsAssignment/tempaltes
 
 Instructions to run:
 
